@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro de Peças Automotivas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Gestão de Peças Automotivas</h1>
+        <p class="subtitle">Cadastro, edição e listagem de produtos</p>
+      </header>
+
+      <main class="main">
+        <!-- Form Section -->
+        <section class="form-section">
+          <h2>Cadastrar / Editar Peça</h2>
+          <form id="productForm" class="form">
+            <div class="form-group">
+              <label for="codigo">Código *</label>
+              <input
+                id="codigo"
+                type="text"
+                name="codigo"
+                placeholder="Ex: PEC-001"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="descricao">Descrição *</label>
+              <input
+                id="descricao"
+                type="text"
+                name="descricao"
+                placeholder="Ex: Pastilha de Freio Dianteira"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="marca">Marca *</label>
+              <input
+                id="marca"
+                type="text"
+                name="marca"
+                placeholder="Ex: Bosch"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="aplicacao">Aplicação *</label>
+              <input
+                id="aplicacao"
+                type="text"
+                name="aplicacao"
+                placeholder="Ex: Toyota Corolla 2020"
+                required
+              />
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" id="submitBtn" class="btn btn-primary">
+                Adicionar Peça
+              </button>
+              <button type="button" id="cancelBtn" class="btn btn-secondary" style="display: none">
+                Cancelar
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- List Section -->
+        <section class="list-section">
+          <div class="list-header">
+            <h2>Produtos Cadastrados</h2>
+            <span id="productCount" class="badge">0</span>
+          </div>
+
+          <div id="productList" class="product-list">
+            <div class="empty-state">
+              <p>Nenhuma peça cadastrada ainda.</p>
+              <p class="text-muted">Adicione a primeira peça usando o formulário acima.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2026 Cadastro de Peças Automotivas — Desafio Fullstack</p>
+      </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
